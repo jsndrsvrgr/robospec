@@ -6,6 +6,14 @@ Natural language to NVIDIA Isaac Lab reinforcement learning environments.
 
 > Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
 
+## Demo
+
+### Full Demo
+<video src="assets/demo_full.mp4" controls width="100%"></video>
+
+### CLI Tool
+<video src="assets/demo_cli.mp4" controls width="100%"></video>
+
 ## How It Works
 
 ```

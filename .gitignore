@@ -36,6 +36,3 @@ htmlcov/
 
 # Generated output
 output/
-
-# Assets (training videos etc.)
-assets/

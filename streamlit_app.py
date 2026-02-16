@@ -323,11 +323,57 @@ st.markdown(
     'RoboSpec</h1>'
     '<p style="font-size:15px;color:#71717a;margin:4px 0 0;">Describe a robot task. '
     'Get a runnable Isaac Lab RL environment.</p>'
+    '<p style="margin-top:8px;">'
+    '<span style="display:inline-block;padding:3px 12px;border-radius:9999px;'
+    'font-size:11px;font-weight:600;letter-spacing:0.025em;'
+    'color:#16a34a;background:#f0fdf4;border:1px solid #bbf7d0;">'
+    'NVIDIA GTC 2026 Golden Ticket Submission</span></p>'
     '</div>',
     unsafe_allow_html=True,
 )
 
 st.markdown("---")
+
+# ---------------------------------------------------------------------------
+# Demo videos
+# ---------------------------------------------------------------------------
+demo_col1, demo_col2 = st.columns(2)
+
+with demo_col1:
+    with st.container(border=True):
+        st.markdown(
+            '<p style="font-size:13px;font-weight:600;color:#18181b;margin-bottom:8px;">'
+            'Full Demo</p>',
+            unsafe_allow_html=True,
+        )
+        demo_full = Path("assets/demo_full.mp4")
+        if demo_full.exists():
+            st.video(str(demo_full))
+        else:
+            st.markdown(
+                '<p style="font-size:13px;color:#a1a1aa;text-align:center;padding:2rem 0;">'
+                'Video coming soon</p>',
+                unsafe_allow_html=True,
+            )
+
+with demo_col2:
+    with st.container(border=True):
+        st.markdown(
+            '<p style="font-size:13px;font-weight:600;color:#18181b;margin-bottom:8px;">'
+            'CLI Tool</p>',
+            unsafe_allow_html=True,
+        )
+        demo_cli = Path("assets/demo_cli.mp4")
+        if demo_cli.exists():
+            st.video(str(demo_cli))
+        else:
+            st.markdown(
+                '<p style="font-size:13px;color:#a1a1aa;text-align:center;padding:2rem 0;">'
+                'Video coming soon</p>',
+                unsafe_allow_html=True,
+            )
+
+st.markdown("")  # spacer
 
 # ---------------------------------------------------------------------------
 # Input section
