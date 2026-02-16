@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/450a57bf-06b2-4cb9-bc7c-7b9689586069
 # RoboSpec
 
 Natural language to NVIDIA Isaac Lab reinforcement learning environments.
@@ -6,9 +8,16 @@ Natural language to NVIDIA Isaac Lab reinforcement learning environments.
 
 > Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
 
+### DEMO
+
+
+https://github.com/user-attachments/assets/87ff36c0-6c1f-4ecb-a7fd-7346d73f219e
+
+
+
 ### CLI Tool
 
-https://github.com/user-attachments/assets/45293903-5a7c-41fd-b404-2a8bfc19b4f5
+https://github.com/user-attachments/assets/a170f7cf-010e-4a4f-9d02-4e3e9c568b70
 
 
 ## How It Works
