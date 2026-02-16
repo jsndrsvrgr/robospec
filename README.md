@@ -14,6 +14,10 @@ Natural language to NVIDIA Isaac Lab reinforcement learning environments.
 ### CLI Tool
 <video src="https://raw.githubusercontent.com/jsndrsvrgr/robospec/main/assets/demo_cli.mp4" controls width="100%"></video>
 
+
+https://github.com/user-attachments/assets/db8b5e84-f6cb-48af-aa16-9cfef3e72c00
+
+
 ## How It Works
 
 ```
