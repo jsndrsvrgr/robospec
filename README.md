@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/450a57bf-06b2-4cb9-bc7c-7b9689586069
 # RoboSpec
 
 Natural language to NVIDIA Isaac Lab reinforcement learning environments.
