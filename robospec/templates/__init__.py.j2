@@ -1,0 +1,12 @@
+import gymnasium as gym
+
+from .{{ task_name }}_env_cfg import {{ env_cfg_class }}
+
+gym.register(
+    id="RoboSpec-{{ robot }}-{{ task }}-v0",
+    entry_point="isaaclab.envs:ManagerBasedRLEnv",
+    kwargs={
+        "env_cfg_entry_point": {{ env_cfg_class }},
+    },
+    disable_env_checker=True,
+)

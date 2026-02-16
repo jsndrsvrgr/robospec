@@ -1,0 +1,41 @@
+# API keys and secrets
+.env
+*.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Testing / caching
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated output
+output/
+
+# Assets (training videos etc.)
+assets/

@@ -1,0 +1,30 @@
+Analyze the following robot learning task description and extract a structured specification.
+
+VALID CATEGORIES (pick exactly one):
+- manipulation_reach: Robot arm reaching or tracking target positions → Robot: franka_panda
+- classic_cartpole: Cart-pole balancing or swing-up tasks → Robot: cartpole
+- locomotion_flat: Quadruped walking on flat ground → Robot: anymal_d
+- locomotion_rough: Quadruped walking on rough/uneven terrain → Robot: anymal_d
+
+INSTRUCTIONS:
+1. Pick the category that best matches the description
+2. Extract what the robot should achieve (objectives)
+3. Extract what should be penalized or avoided (constraints)
+4. If the description doesn't specify constraints, infer reasonable defaults
+5. Set difficulty: "easy" for simple tasks, "medium" for standard, "hard" for complex
+
+Respond with ONLY a valid JSON object. No markdown fences. No explanation. No text before or after the JSON.
+
+{{
+  "category": "manipulation_reach",
+  "robot": "franka_panda",
+  "objectives": ["reach random target positions"],
+  "constraints": ["minimize jerk"],
+  "difficulty": "medium",
+  "episode_length_s": 5.0,
+  "num_envs": 4096,
+  "custom_notes": null
+}}
+
+USER DESCRIPTION:
+{user_input}

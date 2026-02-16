@@ -1,0 +1,13 @@
+The previously generated Isaac Lab environment configuration had the following errors. Fix ONLY these errors. Do not change anything else.
+
+ERRORS:
+{error_list}
+
+{whitelist_hint}
+
+ORIGINAL GENERATED CODE:
+```python
+{original_code}
+```
+
+Output ONLY the corrected env_cfg.py file. No explanations. No markdown fences. Just the Python code.

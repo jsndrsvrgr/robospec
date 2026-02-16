@@ -1,0 +1,56 @@
+Generate a complete, runnable Isaac Lab environment configuration for the following task.
+
+STRICT RULES:
+1. Output ONLY valid Python code in the specified file format below
+2. Follow the @configclass pattern EXACTLY as shown in the example configurations in your context
+3. ONLY use reward functions, observation functions, termination functions, and event functions listed in the APPROVED FUNCTIONS section below
+4. ONLY use robots that appear in the Robot Specifications in your context
+5. Reward weights: positive for objectives, negative for penalties
+6. You MUST include all required config classes: SceneCfg, ObservationsCfg, ActionsCfg, RewardsCfg, TerminationsCfg, EventCfg
+7. You MUST include a __post_init__ method that sets decimation, episode_length_s, and sim.dt
+8. The environment class MUST inherit from ManagerBasedRLEnvCfg
+9. Do NOT use any functions, classes, or imports that don't exist in Isaac Lab
+10. Do NOT invent or hallucinate MDP function names — only use the exact names listed below
+
+ROBOT CONFIGURATION RULES (CRITICAL — violating these will cause runtime crashes):
+- NEVER define robot ArticulationCfg inline with USD paths or spawn configs
+- ALWAYS import the pre-built robot config and use .replace():
+  - Cartpole: from isaaclab_assets.robots.cartpole import CARTPOLE_CFG
+    robot: ArticulationCfg = CARTPOLE_CFG.replace(prim_path="{{ENV_REGEX_NS}}/Robot")
+  - Franka:  from isaaclab_assets.robots.franka import FRANKA_PANDA_HIGH_PD_CFG
+    robot: ArticulationCfg = FRANKA_PANDA_HIGH_PD_CFG.replace(prim_path="{{ENV_REGEX_NS}}/Robot")
+  - ANYmal-D: from isaaclab_assets.robots.anymal import ANYMAL_D_CFG
+    robot: ArticulationCfg = ANYMAL_D_CFG.replace(prim_path="{{ENV_REGEX_NS}}/Robot")
+- NEVER use literal "ISAACLAB_NUCLEUS_DIR/..." strings for robot paths
+- Use 'import isaaclab.envs.mdp as mdp' — NOT task-specific mdp imports
+
+COMMAND CONFIGURATION RULES:
+- For locomotion tasks: include a CommandsCfg class with mdp.UniformVelocityCommandCfg
+- For manipulation/reach tasks: include a CommandsCfg class with mdp.UniformPoseCommandCfg
+- For cartpole/classic tasks: do NOT include a CommandsCfg class (no commands needed)
+- Command configs are accessed as mdp.UniformVelocityCommandCfg(...), not as a separate import
+- See the example configurations in your context for the exact pattern
+
+EPISODE LENGTH GUIDELINES:
+- Cartpole / classic control: episode_length_s = 5.0
+- Manipulation / reach: episode_length_s = 5.0 to 12.0
+- Locomotion flat: episode_length_s = 20.0
+- Locomotion rough: episode_length_s = 20.0
+- Never exceed 20.0 unless the user explicitly requests longer episodes
+
+{approved_functions}
+
+TASK SPECIFICATION:
+- Category: {category}
+- Robot: {robot}
+- Objectives: {objectives}
+- Constraints: {constraints}
+- Difficulty: {difficulty}
+- Episode Length: {episode_length_s}s
+- Num Environments: {num_envs}
+
+OUTPUT FORMAT:
+Output ONLY the env_cfg.py file using the ### FILE: marker below. Do NOT output __init__.py or train.sh — those will be generated automatically.
+
+### FILE: {task_name}_env_cfg.py
+[Complete ManagerBasedRLEnvCfg with all config classes. Must be a self-contained Python file.]

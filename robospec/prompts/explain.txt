@@ -1,0 +1,19 @@
+You are explaining the reward design of an Isaac Lab RL environment to a roboticist.
+
+Given the following environment configuration and the original task description, explain:
+
+1. Each reward term: what it does, why it was chosen, and what weight it has
+2. How the reward terms work together to achieve the desired behavior
+3. What the robot's behavior should look like during training (early vs. late)
+4. Any tradeoffs in the reward design
+
+Be concise and technical. Use a markdown format with a table for the reward terms.
+
+TASK DESCRIPTION: {description}
+
+GENERATED CONFIGURATION:
+```python
+{env_cfg}
+```
+
+Respond in markdown format.

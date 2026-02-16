@@ -1,0 +1,59 @@
+{
+  "franka_panda": {
+    "name": "Franka Emika Panda",
+    "type": "manipulator",
+    "dof": 7,
+    "asset_path": "ISAACLAB_NUCLEUS_DIR/Robots/FrankaEmika/panda_instanceable.usd",
+    "joint_names": ["panda_joint1", "panda_joint2", "panda_joint3", "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"],
+    "joint_regex": ["panda_joint.*"],
+    "gripper_joints": ["panda_finger_joint.*"],
+    "ee_link": "panda_hand",
+    "ee_offset_pos": [0.0, 0.0, 0.107],
+    "default_joint_pos": {
+      "panda_joint1": 0.0,
+      "panda_joint2": -0.569,
+      "panda_joint3": 0.0,
+      "panda_joint4": -2.810,
+      "panda_joint5": 0.0,
+      "panda_joint6": 3.037,
+      "panda_joint7": 0.741,
+      "panda_finger_joint.*": 0.04
+    },
+    "initial_pos": [0.0, 0.0, 0.0],
+    "notes": "7-DOF robot arm. Most common for reach/grasp tasks. Uses implicit actuator model."
+  },
+  "cartpole": {
+    "name": "Cartpole",
+    "type": "classic_control",
+    "dof": 2,
+    "asset_path": "ISAACLAB_NUCLEUS_DIR/Robots/Classic/Cartpole/cartpole.usd",
+    "joint_names": ["slider_to_cart", "cart_to_pole"],
+    "default_joint_pos": {
+      "slider_to_cart": 0.0,
+      "cart_to_pole": 0.0
+    },
+    "initial_pos": [0.0, 0.0, 2.0],
+    "notes": "Classic control benchmark. 1 actuated joint (cart, effort_limit=400.0, damping=10.0), 1 passive (pole, effort_limit=400.0, damping=0.0)."
+  },
+  "anymal_d": {
+    "name": "ANYmal-D",
+    "type": "quadruped",
+    "dof": 12,
+    "asset_path": "ISAACLAB_NUCLEUS_DIR/Robots/ANYbotics/ANYmal-D/anymal_d.usd",
+    "joint_names": ["LF_HAA", "LF_HFE", "LF_KFE", "RF_HAA", "RF_HFE", "RF_KFE", "LH_HAA", "LH_HFE", "LH_KFE", "RH_HAA", "RH_HFE", "RH_KFE"],
+    "joint_regex": [".*HAA", ".*HFE", ".*KFE"],
+    "default_joint_pos": {
+      ".*HAA": 0.0,
+      ".*F_HFE": 0.4,
+      ".*H_HFE": -0.4,
+      ".*F_KFE": -0.8,
+      ".*H_KFE": 0.8
+    },
+    "initial_pos": [0.0, 0.0, 0.6],
+    "actuator_net": "ISAACLAB_NUCLEUS_DIR/ActuatorNets/ANYbotics/anydrive_3_lstm_jit.pt",
+    "effort_limit": 80.0,
+    "velocity_limit": 7.5,
+    "activate_contact_sensors": true,
+    "notes": "Quadruped robot. 12 actuated joints (3 per leg: HAA=hip abduction, HFE=hip flexion, KFE=knee). Uses LSTM actuator network."
+  }
+}
