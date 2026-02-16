@@ -6,16 +6,9 @@ Natural language to NVIDIA Isaac Lab reinforcement learning environments.
 
 > Built for the NVIDIA GTC 2026 Golden Ticket Developer Contest.
 
-## Demo
-
-### Full Demo
-<video src="https://raw.githubusercontent.com/jsndrsvrgr/robospec/main/assets/demo_full.mp4" controls width="100%"></video>
-
 ### CLI Tool
-<video src="https://raw.githubusercontent.com/jsndrsvrgr/robospec/main/assets/demo_cli.mp4" controls width="100%"></video>
 
-
-https://github.com/user-attachments/assets/db8b5e84-f6cb-48af-aa16-9cfef3e72c00
+https://github.com/user-attachments/assets/45293903-5a7c-41fd-b404-2a8bfc19b4f5
 
 
 ## How It Works
